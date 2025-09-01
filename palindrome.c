@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+    int n,rev=0,temp;
+    scanf("%d",&n);
+    if(n<0){
+    printf("Not palindrome\n");
+    return 0;  
+    }
+    temp = n;
+    while(temp> 0){
+        rev = rev*10 + temp%10;
+        temp /=10;
+    }
+    if (rev==n) printf("palindrome\n");
+    else printf("not palindrome");
+    return 0;
+}
